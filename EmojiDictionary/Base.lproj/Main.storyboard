@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ya-Ud-XYC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6WL-mU-CtF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Emoji Table View Controller-->
+        <!--Emoji Dictionary-->
         <scene sceneID="Asf-HW-09w">
             <objects>
                 <tableViewController id="4Ya-Ud-XYC" customClass="EmojiTableViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,10 +34,71 @@
                             <outlet property="delegate" destination="4Ya-Ud-XYC" id="hTi-Jv-TnJ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Emoji Dictionary" id="9vh-zD-dV3">
+                        <barButtonItem key="backBarButtonItem" title="Back to List" id="Zjm-pN-Iqm"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="OF4-5i-mrJ" kind="show" identifier="segWay" id="3Oz-3a-ZJR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kf1-GS-hIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-225" y="100"/>
+            <point key="canvasLocation" x="380" y="155"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="G3e-Eu-mtM">
+            <objects>
+                <viewController id="OF4-5i-mrJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iGI-Wb-b1C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kL-6t-p1U">
+                                <rect key="frame" x="39.5" y="84" width="296" height="325"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="272"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See La Later Alligator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0a-e3-Tt1">
+                                <rect key="frame" x="10" y="585" width="355" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5kL-6t-p1U" firstAttribute="top" secondItem="pIa-Pg-Dag" secondAttribute="top" constant="20" id="TK7-8P-kKI"/>
+                            <constraint firstItem="pIa-Pg-Dag" firstAttribute="trailing" secondItem="L0a-e3-Tt1" secondAttribute="trailing" constant="10" id="VsQ-yo-aXM"/>
+                            <constraint firstItem="L0a-e3-Tt1" firstAttribute="leading" secondItem="pIa-Pg-Dag" secondAttribute="leading" constant="10" id="awS-86-PHX"/>
+                            <constraint firstItem="pIa-Pg-Dag" firstAttribute="bottom" secondItem="L0a-e3-Tt1" secondAttribute="bottom" constant="10" id="lCJ-hQ-dfp"/>
+                            <constraint firstItem="5kL-6t-p1U" firstAttribute="centerX" secondItem="iGI-Wb-b1C" secondAttribute="centerX" id="njQ-ZN-vfb"/>
+                            <constraint firstItem="pIa-Pg-Dag" firstAttribute="bottom" secondItem="L0a-e3-Tt1" secondAttribute="bottom" constant="40" id="r6e-5i-zGK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pIa-Pg-Dag"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrW-vF-ST5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="98.50074962518741"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nvL-Jp-CVT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6WL-mU-CtF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yUC-lE-oXN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Ya-Ud-XYC" kind="relationship" relationship="rootViewController" id="TNo-9a-t9R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4U8-dl-qXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225.59999999999999" y="99.850074962518747"/>
         </scene>
     </scenes>
 </document>
