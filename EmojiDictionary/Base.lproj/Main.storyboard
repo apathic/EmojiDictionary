@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="380" y="155"/>
         </scene>
-        <!--View Controller-->
+        <!--Emoji Detail View Controller-->
         <scene sceneID="G3e-Eu-mtM">
             <objects>
-                <viewController id="OF4-5i-mrJ" sceneMemberID="viewController">
+                <viewController id="OF4-5i-mrJ" customClass="EmojiDetailViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iGI-Wb-b1C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,12 +71,15 @@
                             <constraint firstItem="5kL-6t-p1U" firstAttribute="top" secondItem="pIa-Pg-Dag" secondAttribute="top" constant="20" id="TK7-8P-kKI"/>
                             <constraint firstItem="pIa-Pg-Dag" firstAttribute="trailing" secondItem="L0a-e3-Tt1" secondAttribute="trailing" constant="10" id="VsQ-yo-aXM"/>
                             <constraint firstItem="L0a-e3-Tt1" firstAttribute="leading" secondItem="pIa-Pg-Dag" secondAttribute="leading" constant="10" id="awS-86-PHX"/>
-                            <constraint firstItem="pIa-Pg-Dag" firstAttribute="bottom" secondItem="L0a-e3-Tt1" secondAttribute="bottom" constant="10" id="lCJ-hQ-dfp"/>
                             <constraint firstItem="5kL-6t-p1U" firstAttribute="centerX" secondItem="iGI-Wb-b1C" secondAttribute="centerX" id="njQ-ZN-vfb"/>
                             <constraint firstItem="pIa-Pg-Dag" firstAttribute="bottom" secondItem="L0a-e3-Tt1" secondAttribute="bottom" constant="40" id="r6e-5i-zGK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pIa-Pg-Dag"/>
                     </view>
+                    <connections>
+                        <outlet property="EmojiLabel" destination="5kL-6t-p1U" id="3VD-5Z-2ge"/>
+                        <outlet property="EmojiNameLabel" destination="L0a-e3-Tt1" id="WPp-es-2gw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrW-vF-ST5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

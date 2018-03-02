@@ -31,7 +31,12 @@ class EmojiTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segWay", sender: nil)
+        performSegue(withIdentifier: "segWay", sender: emojis[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let emojiDefVC = segue.destination as! EmojiDetailViewController
+        emojiDefVC.emoji = sender as! String
     }
     
 }
