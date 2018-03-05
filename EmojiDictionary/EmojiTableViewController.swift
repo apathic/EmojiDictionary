@@ -29,6 +29,7 @@ class EmojiTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(emojis[indexPath.row])
         performSegue(withIdentifier: "segWay", sender: emojis[indexPath.row])
     }
     
